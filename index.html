@@ -11,42 +11,55 @@
 </head>
 <body>
     <div class="container">
-   <h1> The Weather  </h1> 
-   <div class="weatherApp">
-        <h2> Paris </h2>
-        <br>
-            <ul>
-                <li>
-                    Friday 5:00
-                </li>
-                <li>
-                    Sunny
-                </li>
-            </ul>
-    <div class="row">
-        <div class="col-6">
-            <img class="sun" src="http://www.bom.gov.au/images/symbols/large/sunny.png">
-            12 deg C | F 
+    <title>Weather App</title>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="weather-app-wrapper">
+                <div class="weather-app">
+                    <form id="search-form" class="mb-3">
+                        <div class="row">
+                            <div class="col-9">
+                                <input type="search" placeholder="Type a city.." class="form-control" id="city-input"
+                                    autocomplete="off" />
+                            </div>
+                            <div class="col-3">
+                                <input type="submit" value="Search" class="btn btn-primary w-100" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="overview">
+                        <h1 id="city"></h1>
+                        <ul>
+                            <li>Last updated: <span id="date"></span></li>
+                            <li id="description"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="clearfix weather-temperature">
+                                <img src="" alt="Clear" id="icon" class="float-left" />
+                                <div class="float-left">
+                                    <strong id="temperature"></strong><span class="units"> °C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Humidity: <span id="humidity"></span>%</li>
+                                <li>Wind: <span id="wind"></span> km/h</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="weather-forecast" id="forecast"></div>
+                </div>
+                <small>
+                    <a href="https://github.com/wecodeschool/vanilla-weather-app" target="_blank">Open-source code</a>
+                    by Matt Delac
+                </small>
+            </div>
         </div>
-        <div class="col-6">
-            <ul>
-                <li>
-                    Percipritation: 0%
-                </li>
-                <li>
-                    Humidity: 100%
-                </li>
-                <li>
-                    Wind
-                </li>
-            </ul>
-        </div>
-
-    </div>
-</div>
-        <small> Open-source code by, <a href="https://github.com/Tekk00/Weather-app-final.git">Tekkiya Larkins</a></small>
-</div>
-
 <script src = "Java.js"></script>
     </body>
 </html>
